@@ -12,38 +12,17 @@ public class MomDialogue : MonoBehaviour
     [SerializeField]
     private GameObject two;
 
-    public static bool momhit = false;
+    public static MomDialogue instance;
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public IEnumerator momhit()
     {
-        momhit = true;
-        print(momhit);
-        MuevePersonaje.instance.velocidadX = 0;
-        MuevePersonaje.instance.velocidadY = 0;
-        StartCoroutine(mostrardialogo());
-        
-    }
-
-    public IEnumerator mostrardialogo()
-    {
-        
-        one.SetActive(momhit);
+        one.SetActive(true);
         yield return new WaitForSeconds(2.5f);
         one.SetActive(false);
         two.SetActive(true);
         yield return new WaitForSeconds(2.5f);
-        two.SetActive(false);
-        MuevePersonaje.instance.velocidadX = 5;
-        MuevePersonaje.instance.velocidadY = 1;
-
-
+        two.SetActive(false);   
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        momhit = false;
-        print(momhit);
-
-    }
+    private void Awake() => instance = this;
 }
