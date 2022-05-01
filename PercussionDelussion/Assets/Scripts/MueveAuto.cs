@@ -2,16 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MuevePersonaje : MonoBehaviour
+public class MueveAuto : MonoBehaviour
 {
     // Variable de instancia
     private Rigidbody2D rb;
 
     //Animator
     private Animator animator;
-
-    //SprtRenderer
-    private SpriteRenderer spriteRenderer;
 
     //Velocidad
     public float velocidadX = 0;
@@ -25,7 +22,6 @@ public class MuevePersonaje : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>(); 
         BoxCollider2D = GetComponent<BoxCollider2D>();
     }
 
@@ -33,8 +29,7 @@ public class MuevePersonaje : MonoBehaviour
     private void FixedUpdate()
     {
         float movVertical = Input.GetAxis("Jump");
-        float movHorizontal = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(movHorizontal * velocidadX, rb.velocity.y);
+        rb.velocity = new Vector2(velocidadX, rb.velocity.y);
         if (movVertical > 0 & PruebaPiso.estaEnPiso == true)
         {
             rb.velocity = new Vector2(rb.velocity.x, movVertical * velocidadY * 6);
@@ -57,9 +52,6 @@ public class MuevePersonaje : MonoBehaviour
         float velocidad = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("velocidad", velocidad);
 
-        //Dirección
-        spriteRenderer.flipX = rb.velocity.x < 0;
-
         //Animacion saltando
         animator.SetBool("saltando", !PruebaPiso.estaEnPiso);
     }
@@ -67,7 +59,6 @@ public class MuevePersonaje : MonoBehaviour
     {
         if (collision.CompareTag("npc"))
         {
-            print("help");
             velocidadX = 0;
             velocidadY = 0;
             StartCoroutine(MomDialogue.instance.momhit());
