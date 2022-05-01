@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
                         Jugador.velocity = new Vector3(0, Salto, 0);
                     }
                 }
-                transform.position = new Vector3(transform.position.x + Velocidad, transform.position.y, transform.position.z);
+                transform.position = new Vector3(transform.position.x * Velocidad, transform.position.y, transform.position.z);
                 transform.rotation = new Quaternion();
             }
         }
