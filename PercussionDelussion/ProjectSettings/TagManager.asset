@@ -4,20 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< Updated upstream
-  - Meta
-  - Mapa
-  - Trampa
-=======
-  - Trampa
-  - Ladder
-  - Meta
-  - Platform
-  - "da\xF1o"
+  - SCORE
+  - LIFE
   - HEART
   - COIN
-  - EAGLE
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
