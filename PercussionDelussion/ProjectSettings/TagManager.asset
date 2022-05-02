@@ -8,6 +8,8 @@ TagManager:
   - LIFE
   - HEART
   - COIN
+  - "DA\xD1O"
+  - Trampa
   layers:
   - Default
   - TransparentFX

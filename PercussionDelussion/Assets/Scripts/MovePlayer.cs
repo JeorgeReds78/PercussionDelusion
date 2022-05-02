@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class MovePlayer : MonoBehaviour
 {
     public float jump = 5;
@@ -12,7 +13,6 @@ public class MovePlayer : MonoBehaviour
     public Text TXTlife;
     public Text TXTscore;
     public int score;
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -34,7 +34,7 @@ public class MovePlayer : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "daño")
+        if (collision.gameObject.tag == "DAÑO")
         {
             life = life - damage;
         }
