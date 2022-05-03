@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MueveAuto : MonoBehaviour
 {
@@ -32,11 +33,13 @@ public class MueveAuto : MonoBehaviour
         animator = GetComponent<Animator>();
         BoxCollider2D = GetComponent<BoxCollider2D>();
         score = 1000;
+        StartCoroutine(waitstart());
     }
 
     // Update is called once per frame
     private void FixedUpdate()
     {
+
         float movVertical = Input.GetAxis("Jump");
         rb.velocity = new Vector2(velocidadX, rb.velocity.y);
         if (movVertical > 0 & PruebaPiso.estaEnPiso == true)
@@ -66,14 +69,6 @@ public class MueveAuto : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("npc"))
-        {
-            velocidadX = 0;
-            velocidadY = 0;
-            StartCoroutine(MomDialogue.instance.momhit());
-            velocidadX = 10;
-            velocidadY = 1.1f;
-        }
         if (collision.gameObject.tag == "HEART")
         {
             score = score + 30;
@@ -87,7 +82,25 @@ public class MueveAuto : MonoBehaviour
         if (collision.gameObject.tag == "DAÑO")
         {
             score = score - damage;
+            animator.SetBool("hurt", true);
         }
 
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "DAÑO")
+        {
+            animator.SetBool("hurt", false);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
+    private IEnumerator waitstart()
+    {
+        velocidadX = 0;
+        yield return new WaitForSeconds(3);
+        velocidadX = 7;
+    }
 }
+
