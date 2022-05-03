@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MueveAuto : MonoBehaviour
 {
+    public Text TXTscore;
+    public int score;
+    public int damage = 20;
     // Variable de instancia
     private Rigidbody2D rb;
 
@@ -16,13 +20,18 @@ public class MueveAuto : MonoBehaviour
 
     //Box collider
     private BoxCollider2D BoxCollider2D;
-
+    private void Update()
+    {
+        TXTscore.text = "Score: " + score;
+     
+    }
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         BoxCollider2D = GetComponent<BoxCollider2D>();
+        score = 1000;
     }
 
     // Update is called once per frame
@@ -57,18 +66,28 @@ public class MueveAuto : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("DAÑO"))
+        if (collision.CompareTag("npc"))
         {
-            animator.SetBool("hurt", true);
+            velocidadX = 0;
+            velocidadY = 0;
+            StartCoroutine(MomDialogue.instance.momhit());
+            velocidadX = 10;
+            velocidadY = 1.1f;
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("DAÑO"))
+        if (collision.gameObject.tag == "HEART")
         {
-            animator.SetBool("hurt", false);
+            score = score + 30;
+            Destroy(collision.gameObject);
         }
-    }
+        if (collision.gameObject.tag == "COIN")
+        {
+            score = score + 15;
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "DAÑO")
+        {
+            score = score - damage;
+        }
 
+    }
 }
