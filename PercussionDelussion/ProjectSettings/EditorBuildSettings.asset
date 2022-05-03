@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/2D Hand Painted/Sample/Scenes/Stage2.unity
+    guid: 76171135f60450d44b0ec68c9b3482f8
+  - enabled: 1
+    path: Assets/2D Hand Painted/Sample/Scenes/Demo.unity
+    guid: 96e861643c9f0484eac94ad1d301be70
   m_configObjects: {}
