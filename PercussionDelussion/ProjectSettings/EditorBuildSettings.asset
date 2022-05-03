@@ -6,12 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/2D Hand Painted/Sample/Scenes/Stage2.unity
-    guid: 76171135f60450d44b0ec68c9b3482f8
+    path: Assets/Scenes/Login.unity
+    guid: 470d70fe75ee6054b9a4beed8527ceaf
+  - enabled: 1
+    path: Assets/Scenes/Register.unity
+    guid: 4b1786d9cb0420f4bafd745c73228ba4
+  - enabled: 1
+    path: Assets/2D Hand Painted/Sample/Scenes/Demo.unity
+    guid: 96e861643c9f0484eac94ad1d301be70
+  - enabled: 1
+    path: Assets/Scenes/Pregunta1.unity
+    guid: 10b44b50381067b4e9a6c153f71c8e13
   - enabled: 1
     path: Assets/Scenes/noteborres.unity
     guid: 508e24ce03ce1404a84f92155fb55b68
   - enabled: 1
-    path: Assets/2D Hand Painted/Sample/Scenes/Demo.unity
-    guid: 96e861643c9f0484eac94ad1d301be70
+    path: Assets/Scenes/Pregunta2.unity
+    guid: ee6779c0ef3114a4594404b586698501
+  - enabled: 1
+    path: Assets/2D Hand Painted/Sample/Scenes/Stage2.unity
+    guid: 76171135f60450d44b0ec68c9b3482f8
+  - enabled: 1
+    path: Assets/Scenes/Pregunta3.unity
+    guid: 8fd94b2b5136fc14988a101b90dac235
+  - enabled: 1
+    path: Assets/Scenes/Fin.unity
+    guid: 9d79c03a5d814194aa097e949c7dd77f
   m_configObjects: {}

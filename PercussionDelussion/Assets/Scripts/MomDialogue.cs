@@ -12,6 +12,9 @@ public class MomDialogue : MonoBehaviour
     [SerializeField]
     private GameObject two;
 
+    [SerializeField]
+    private GameObject three;
+
     public static MomDialogue instance;
 
     public IEnumerator momhit()
@@ -21,7 +24,10 @@ public class MomDialogue : MonoBehaviour
         one.SetActive(false);
         two.SetActive(true);
         yield return new WaitForSeconds(2.5f);
-        two.SetActive(false);   
+        two.SetActive(false);
+        three.SetActive(true);
+        yield return new WaitForSeconds(2.5f);
+        three.SetActive(false);
     }
 
     private void Awake() => instance = this;

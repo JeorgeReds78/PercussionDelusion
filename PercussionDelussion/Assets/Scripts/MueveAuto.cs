@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class MueveAuto : MonoBehaviour
 {
-    public Text TXTscore;
-    public int score;
-    public int damage = 20;
+    //public Text TXTscore;
+    private int score;
+    public int damage = 50;
     // Variable de instancia
     private Rigidbody2D rb;
 
@@ -23,7 +23,7 @@ public class MueveAuto : MonoBehaviour
     private BoxCollider2D BoxCollider2D;
     private void Update()
     {
-        TXTscore.text = "Score: " + score;
+        //TXTscore.text = "Score: " + score;
      
     }
     // Start is called before the first frame update
@@ -32,7 +32,7 @@ public class MueveAuto : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         BoxCollider2D = GetComponent<BoxCollider2D>();
-        score = 1000;
+        score = PlayerPrefs.GetInt("score", 3000);
         StartCoroutine(waitstart());
     }
 
@@ -84,7 +84,10 @@ public class MueveAuto : MonoBehaviour
             score = score - damage;
             animator.SetBool("hurt", true);
         }
-
+        if(collision.gameObject.tag == "Finish")
+        {
+            Points.instance.actualizar(score);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)

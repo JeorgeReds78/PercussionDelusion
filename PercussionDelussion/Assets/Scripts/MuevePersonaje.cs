@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MuevePersonaje : MonoBehaviour
 {
@@ -75,4 +76,10 @@ public class MuevePersonaje : MonoBehaviour
             velocidadY = 1.1f;
         }
     }
+
+    private void OnBecameInvisible()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
 }
