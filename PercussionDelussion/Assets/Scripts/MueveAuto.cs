@@ -57,13 +57,18 @@ public class MueveAuto : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("npc"))
+        if (collision.CompareTag("DAÑO"))
         {
-            velocidadX = 0;
-            velocidadY = 0;
-            StartCoroutine(MomDialogue.instance.momhit());
-            velocidadX = 10;
-            velocidadY = 1.1f;
+            animator.SetBool("hurt", true);
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("DAÑO"))
+        {
+            animator.SetBool("hurt", false);
+        }
+    }
+
 }
