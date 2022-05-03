@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/2D Hand Painted/Sample/Scenes/Stage2.unity
     guid: 76171135f60450d44b0ec68c9b3482f8
   - enabled: 1
+    path: Assets/Scenes/noteborres.unity
+    guid: 508e24ce03ce1404a84f92155fb55b68
+  - enabled: 1
     path: Assets/2D Hand Painted/Sample/Scenes/Demo.unity
     guid: 96e861643c9f0484eac94ad1d301be70
   m_configObjects: {}
