@@ -8,14 +8,24 @@ public class PreguntaMenu3 : MonoBehaviour
 {
     public TMP_Text resultado;
     // Se debería hacer un menú por nivel
+    private void Start()
+    {
+        PlayerPrefs.SetString("P", "3");
+    }
     public void Respuesta1()
     {
+        PlayerPrefs.SetString("R", "1 to 2 hours");
+        PlayerPrefs.SetString("RB", "false");
         StartCoroutine(falso());
+        DBPreguntas.instance.Conectar();
     }
 
     public void Respuesta2()
     {
+        PlayerPrefs.SetString("R", "Between 0 and 30 seconds");
+        PlayerPrefs.SetString("RB", "false");
         StartCoroutine(verdadero());
+        DBPreguntas.instance.Conectar();
     }
     private IEnumerator falso()
     {

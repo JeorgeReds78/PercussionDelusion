@@ -37,7 +37,11 @@ public class Register : MonoBehaviour
         PlayerPrefs.SetString("nombre", textoNombre.text);
         PlayerPrefs.SetString("password", textoPassword.text);
         PlayerPrefs.SetString("usuario", textoUsuario.text);
+        PlayerPrefs.SetString("edad", textoEdad.text);
+        PlayerPrefs.SetString("nacionalidad", textoNacionalidad.text);
+        PlayerPrefs.SetString("genero", textoGenero.text);
         PlayerPrefs.SetString("entrytime", entrytime);
+        Connectivity.instance.Conectar();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
     public void regresar()

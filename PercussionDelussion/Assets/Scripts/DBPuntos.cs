@@ -3,46 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Data.SqlClient;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using TMPro;
 
 
 
-public class Login : MonoBehaviour
+public class DBPuntos : MonoBehaviour
 {
-    public TextMeshProUGUI resultado;
+    public static DBPuntos instance;
 
-    //Referencias a las entradas de texto
-    public TMP_InputField textoNombre;
-    public TMP_InputField textoPassword;
-
-    string contrasena;
     // after the sql query is executed we will have a filled users array
     // Use this for initialization
-
-    public void gametime()
-    {
-        Conectar();
-        if (contrasena == textoPassword.text)
-        {
-            SceneManager.LoadScene("Demo");
-        }
-        else
-        {
-            resultado.text = "Incorrect password or username";
-        }
-    }
-
-    public void registro()
-    {
-        SceneManager.LoadScene("Register");
-    }
-
-    public void Adios()
-    {
-        Application.Quit();
-    }
-
     public void Conectar()
     {
         // initialize global users array
@@ -68,7 +37,7 @@ public class Login : MonoBehaviour
                 connection.Open();
                 Debug.Log("connection established");
                 // sql command
-                string sql = "SELECT password FROM Usuarios WHERE gamerTag = '" + textoNombre.text + "'";
+                string sql = "execute actualizaP " + PlayerPrefs.GetString("usuario") + ", " + PlayerPrefs.GetInt("score");
                 // execute sql command
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
@@ -78,8 +47,8 @@ public class Login : MonoBehaviour
                         // each line in the output
                         while (reader.Read())
                         {
-                            // get output parameters
-                            contrasena = reader["password"].ToString();
+                        
+                            
                         }
                     }
                 }
@@ -90,10 +59,11 @@ public class Login : MonoBehaviour
             Debug.Log(e.ToString());
         }
     }
-
+    private void Awake() => instance = this;
 }
 
 // init class for skill to create an array list of skills for a user
 
 
 // init class for User (that is shown on the cube
+

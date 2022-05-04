@@ -15,11 +15,13 @@ public class Fin : MonoBehaviour
     public void otravez()
     {
         PlayerPrefs.SetInt("score", 3000);
+        DBPuntos.instance.Conectar();
         SceneManager.LoadScene("Demo");
     }
     public void fin()
     {
         PlayerPrefs.SetInt("score", 3000);
+        DBPuntos.instance.Conectar();
         Application.Quit();
     }
 }

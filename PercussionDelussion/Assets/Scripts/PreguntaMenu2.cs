@@ -6,15 +6,25 @@ using TMPro;
 public class PreguntaMenu2 : MonoBehaviour
 {
     public TMP_Text resultado;
+    private void Start()
+    {
+        PlayerPrefs.SetString("P", "2");
+    }
     // Se debería hacer un menú por nivel
     public void Respuesta1()
     {
+        PlayerPrefs.SetString("R", "True");
+        PlayerPrefs.SetString("RB", "true");
         StartCoroutine(verdadero());
+        DBPreguntas.instance.Conectar();
     }
 
     public void Respuesta2()
     {
+        PlayerPrefs.SetString("R", "False");
+        PlayerPrefs.SetString("RB", "false");
         StartCoroutine(falso());
+        DBPreguntas.instance.Conectar();
     }
     private IEnumerator falso()
     {

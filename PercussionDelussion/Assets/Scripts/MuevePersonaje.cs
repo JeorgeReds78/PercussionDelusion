@@ -28,6 +28,7 @@ public class MuevePersonaje : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>(); 
         BoxCollider2D = GetComponent<BoxCollider2D>();
+        Points.instance.actualizarS(SceneManager.GetActiveScene().buildIndex);
     }
 
     // Update is called once per frame

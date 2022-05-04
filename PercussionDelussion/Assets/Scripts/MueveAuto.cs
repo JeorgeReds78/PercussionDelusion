@@ -33,6 +33,7 @@ public class MueveAuto : MonoBehaviour
         animator = GetComponent<Animator>();
         BoxCollider2D = GetComponent<BoxCollider2D>();
         score = PlayerPrefs.GetInt("score", 3000);
+        Points.instance.actualizarS(SceneManager.GetActiveScene().buildIndex);
         StartCoroutine(waitstart());
     }
 
