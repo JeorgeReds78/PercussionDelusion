@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1304
     height: 725
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Console
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 41
+  controlID: 21
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -95,8 +95,8 @@ MonoBehaviour:
     y: 0
     width: 246
     height: 401
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 42
+  controlID: 22
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 43
+  controlID: 23
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -309,7 +309,7 @@ MonoBehaviour:
     m_CachedPref: 50
     m_ControlHash: 1964396721
     m_PrefName: Preview_TilemapBrushInspector
-  m_Palette: {fileID: 3048962478135121097, guid: 71b1c09d7c70d3e4f9a5d2f6cd33f5a0, type: 3}
+  m_Palette: {fileID: 1480529306102474562, guid: 5100ee501a523b14c8461267f3571858, type: 3}
   m_DrawGridGizmo: 1
   m_DrawGizmos: 0
 --- !u!114 &13
@@ -353,36 +353,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\USER\Documents\GitHub\PercussionDelusion\PercussionDelussion
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 251}
-    m_SelectedIDs: 8e700000
-    m_LastClickedID: 28814
-    m_ExpandedIDs: 00000000ea6e0000ec6e0000ee6e0000f06e0000f26e000076700000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 6a6f0000
+    m_LastClickedID: 28522
+    m_ExpandedIDs: 00000000626f0000646f0000666f0000686f00006a6f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Sunnyland
-      m_OriginalName: Sunnyland
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 28818
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -396,7 +396,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ea6e0000ec6e0000ee6e0000f06e0000f26e0000
+    m_ExpandedIDs: 00000000626f0000646f0000666f0000686f00006a6f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -421,8 +421,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 0ac90000
-    m_LastClickedInstanceID: 51466
+    m_SelectedInstanceIDs: 66b1ffff
+    m_LastClickedInstanceID: -20122
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -448,7 +448,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 1}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -524,9 +524,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0ac90000
+      m_SelectedIDs: 66b1ffff
       m_LastClickedID: 0
-      m_ExpandedIDs: 8256fcff5669fcff786bfcff3e6cfcffea6cfcffc67efcff3a84fcffa889fcff208afcffb28afcff788bfcff428cfcff2a93fcff34b4fcff0ac4fcff38c5fcffeac5fcffaec6fcff82c8fcffced6fcffd8d6fcffdcd8fcffa6dcfcffd6e3fcff8ee4fcff5ee5fcff96f9fcffee17fdff4e4bfdff665afdff7062fdff2263fdff1668fdff4c6afdffa270fdff14aafdffe8b9fdfff4c2fdffeec7fdfff4defdff42eefdff0cfbfdffcefbfdff8afcfdffc203feff6609feff4615feff1418feff4c2ffeff3842feff3a42feffee43feffa8aeffff34b6ffff94b8ffffdefaffffa26b0000b66b000038c900007ec9000040cb000088cb00009acb0000d2cd0000ead1000028d40000f4e4000078e50000faf2000072f3000034f500005a100100de100100fa100100a8120100f0120100102501008c5e0100d45e0100d8620100546301008a68010006690100c0770100f477010094910100c8920100e89201001693010080930100ce930100acf10100bef10100d2f10100faf1010074f20100acf20100b8f2010020f3010088f30100d0f30100faf5010014f601000af7010076fb010024fd0100fefd01008afe0100820002009e000200a6000200
+      m_ExpandedIDs: 28bbffff78bbffff96d0ffff2ed1ffff34d3ffff40d3ffff6ed5ffff7ad5ffffb6d6ffffc4d6ffff8adaffffaedaffffc4daffff08fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -797,9 +797,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 108.19373, y: 6.64298, z: 2.092266}
+    m_Target: {x: 13.798331, y: 15.333049, z: 2.769908}
     speed: 2
-    m_Value: {x: 108.19373, y: 6.64298, z: 2.092266}
+    m_Value: {x: 13.798331, y: 15.333049, z: 2.769908}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -850,9 +850,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 53.24009
+    m_Target: 43.370815
     speed: 2
-    m_Value: 53.24009
+    m_Value: 43.370815
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -936,9 +936,9 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 0
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
